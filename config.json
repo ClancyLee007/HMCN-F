@@ -1,0 +1,24 @@
+{
+  "label_num_1": 24,
+  "label_num_2": 158,
+  "label_num_3": 52,
+  "label_total_num": 234,
+  "feather_schema":[
+    {
+      "name": "albert_emb",
+      "dim": 1024
+    },
+    {
+      "name": "image_emb",
+      "dim": 2048
+    },
+    {
+      "name": "mix_emb",
+      "dim":1024
+    }
+  ],
+  "feature_dim": 4096,
+  "batch_size": 32,
+  "LMF_rank": 100,
+  "LMF_output_dim" : 1024
+}
