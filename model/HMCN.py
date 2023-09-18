@@ -91,9 +91,9 @@ class LMF(tf.keras.layers.Layer):
         logger.info(f"image emb tensor shape : {image_emb.shape}")
         logger.info(f"video emb tensor shape : {video_emb.shape}")
 
-        _vidio_h = tf.pad(video_emb, [[0, 0], [0, 1]])
-        _textual_h = tf.pad(textual_emb, [[0, 0], [0, 1]])
-        _image_h = tf.pad(image_emb, [[0, 0], [0, 1]])
+        _vidio_h = tf.pad(video_emb, [[0, 0], [0, 1]], constant_values=1)
+        _textual_h = tf.pad(textual_emb, [[0, 0], [0, 1]], constant_values=1)
+        _image_h = tf.pad(image_emb, [[0, 0], [0, 1]], constant_values=1)
 
         fusion_vidio = tf.matmul(_vidio_h, self.vidio_factor)
         fusion_textual = tf.matmul(_textual_h, self.textual_factor)
